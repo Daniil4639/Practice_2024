@@ -1,0 +1,31 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Упражнение 7</title>
+    <script>
+        function getSubjects() {
+            subjects=new Array("русский язык","литература","история","философия","алгебра","астрономия",
+                "физика","химия","информатика");
+
+            humanitarian=new Array();
+            humanitarian=subjects.slice(0,4);
+            document.write("Гуманитарные: "+humanitarian+"<br>");
+
+            accurate=new Array();
+            accurate=subjects.slice(4,9);
+            document.write("Точные: "+accurate+"<br>");
+        }
+    </script>
+</head>
+<body>
+    <script language="JavaScript">
+        year=new Array("декабрь","январь","февраль","март","апрель","май",
+        "июнь","июль","август","сентябрь","октябрь","ноябрь");
+        summer=new Array(); //летние месяцы
+        summer=year.slice(6,9);
+        document.write(summer+"<br>");
+
+        getSubjects();
+    </script>
+</body>
+</html>
