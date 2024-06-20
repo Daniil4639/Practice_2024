@@ -1,0 +1,39 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Упражнение 1</title>
+    <script language="JavaScript">
+        function openDialog() {
+            dialog.show();
+            var y = parseInt(secondLine.style.top.match(/\d+/));
+            y+=180;
+            secondLine.style.top = y + "px";
+        }
+
+        function closeDialog() {
+            dialog.close();
+            var y = parseInt(secondLine.style.top.match(/\d+/));
+            y-=180;
+            secondLine.style.top = y + "px";
+
+            document.write("Добро пожаловать!");
+        }
+    </script>
+</head>
+<body onLoad="openDialog()">
+    <div style="position:fixed;left:0;">
+        <p>
+            Первый абзац!
+        </p>
+
+        <dialog id="dialog">
+            <h1>Добро пожаловать!</h1>
+            <button id="closeButton" onclick="closeDialog()">Закрыть</button>
+        </dialog>
+
+        <div id="secondLine" style="position:absolute;top:60">
+            Второй абзац!
+        </div>
+    </div>
+</body>
+</html>

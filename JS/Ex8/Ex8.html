@@ -1,0 +1,28 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Упражнение 8</title>
+    <script>
+        function transfer() {
+            var nav = window.navigator;
+            let browser = nav.appName;
+
+            document.write("Используется браузер: " + browser + "<br>Идет перенаправление...");
+
+            setTimeout(function() {
+                if (nav.appName == 'Microsoft Internet Explorer') {
+                    window.location.href='Ex1.html';
+                }
+                else {
+                    window.location.href='Ex3.html';
+                }
+            }, 1500);
+        }
+    </script>
+</head>
+<body>
+    <script language="JavaScript">
+        transfer();
+    </script>
+</body>
+</html>

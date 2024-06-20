@@ -1,0 +1,31 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Упражнение 3</title>
+    <script language="JavaScript">
+        function nameDialog() {
+            var result = window.prompt("Введите сюда свое имя", "Введите имя");
+            document.write(result);
+
+            setTimeout(function() {
+                confirmDialog();
+            }, 1000);
+        }
+
+        function confirmDialog() {
+            const result = confirm("Начать заново?");
+            if (result) {
+                alert("Не надоело?");
+            }
+            else {
+                alert("Ну и правильно!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <script>
+        nameDialog();
+    </script>
+</body>
+</html>
