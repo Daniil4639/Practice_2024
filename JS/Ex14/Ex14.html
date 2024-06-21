@@ -1,0 +1,64 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Упражнение 14</title>
+    <script language="JavaScript">
+        function sendMes() {
+            if (your_name.value.length == 0) {
+                your_name.focus();
+                your_name.select();
+                return;
+            }
+            if (your_password.value.length <= 4) {
+                your_password.focus();
+                your_password.select();
+                return;
+            }
+            if (your_password.value != your_password_check.value) {
+                your_password_check.focus();
+                your_password_check.select();
+                return;
+            }
+            if (!your_email.value.includes("@")) {
+                your_email.focus();
+                your_email.select();
+                return;
+            }
+            if (your_letter.value.length <= 10) {
+                your_letter.focus();
+                your_letter.select();
+                return;
+            }
+        }
+
+        function clearForm() {
+            form.reset();
+        }
+    </script>
+</head>
+<body>
+    <form id="form">
+        Ваше имя:* <label>
+            <input type="text" id="your_name">
+        </label><br><br>
+        Пароль:* <label>
+            <input type="password" id="your_password">
+        </label><br><br>
+        Подтверждение пароля:* <label>
+            <input type="password" id="your_password_check">
+        </label><br><br>
+        Электронный адрес:* <label>
+            <input type="email" id="your_email">
+        </label><br><br>
+        Тема сообщения: <label>
+            <input type=text id="your_theme">
+        </label><br><br>
+        Сообщение: <label>
+            <textarea id="your_letter" style="width: 200px;height: 100px;"></textarea>
+        </label><br><br>
+        <label>
+            <button type="button" onclick="sendMes()">Отправить</button><button type="button" onclick="clearForm()">Очистить</button>
+        </label>
+    </form>
+</body>
+</html>
