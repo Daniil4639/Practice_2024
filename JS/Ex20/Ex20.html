@@ -1,0 +1,30 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Упражнение 20</title>
+    <script language="JavaScript">
+        function moveImage() {
+            var x = parseInt(image.style.left.match(/\d+/));
+
+            if (x < 550) {
+                x += 4;
+
+                image.style.left = x + "px";
+
+                setTimeout("moveImage()", 50);
+            }
+        }
+    </script>
+</head>
+<body onLoad="moveImage()">
+    <h1>Абсолютное позиционирование и Z-индекс</h1>
+    <hr>
+    <label>
+        <textarea readonly="readonly" style="background: red; color: white; width: 150; height: 100; position: absolute; left: 200; top: 90; z-index: 6; font-size: 40">Это ближе</textarea>
+    </label>
+    <label>
+        <textarea readonly="readonly" style="background: blue; color: white; width: 120; height: 80; position: absolute; left: 400; top: 70; z-index: 4; font-size: 30">Это дальше</textarea>
+    </label>
+    <img id="image" src="shrek.jpg" width="120" height="80" style="position: absolute; left: 70; top: 100; z-index: 5;">
+</body>
+</html>
