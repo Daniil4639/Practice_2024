@@ -1,0 +1,28 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Упражнение 12</title>
+    <script language="JavaScript">
+        function goToPDF() {
+            const res = confirm("Для открытия PDF - файла требуется Acrobat. Продолжить?");
+
+            if (res) {
+                window.open("JS_metodichka.pdf");
+            }
+        }
+
+        function changeBG() {
+            if (document.bgColor == '' || document.bgColor == 'white') {
+                document.bgColor = 'red';
+            }
+            else {
+                document.bgColor = 'white'
+            }
+        }
+    </script>
+</head>
+<body>
+    <a href="" onclick="goToPDF()">Ссылка на PDF - документ</a><br>
+    <a href="" onmouseover="changeBG()" onmouseout="changeBG()">Ссылка, меняющая цвета фона</a>
+</body>
+</html>
