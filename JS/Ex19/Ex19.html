@@ -1,0 +1,35 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Упражнение 19</title>
+    <script language="JavaScript">
+        var screenW = window.innerWidth;
+        var screenH = window.innerHeight;
+
+        function moveTxt() {
+            var x = parseInt(anim.style.left.match(/\d+/));
+            var y = parseInt(anim.style.top.match(/\d+/));
+
+            if (x >= (screenW / 2) && y <= (screenH / 2)) {
+                x -= 1;
+                y += 1;
+
+                anim.style.left = x + "px";
+                anim.style.top = y + "px";
+
+                setTimeout("moveTxt()", 50);
+            }
+        }
+
+        function replaceTxt() {
+            anim.style.left = (screenW - 150) + "px";
+            moveTxt();
+        }
+    </script>
+</head>
+<body onLoad="replaceTxt()">
+    <div id="anim" style="position:absolute; left:10; top:10">
+        Текст, шагом марш!
+    </div>
+</body>
+</html>
