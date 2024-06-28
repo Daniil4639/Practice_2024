@@ -1,0 +1,137 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+            rel="stylesheet"
+    />
+    <title>DD-shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <script language="JavaScript" src="scripts.js"></script>
+    <script src="https://kit.fontawesome.com/bfec730d56.js" crossorigin="anonymous"></script>
+</head>
+<body onload="addGoods()">
+    <dialog id="signInDialog" class="signInDialog">
+        <img src="images/logo1.svg" class="logoSignIn">
+        <div class="signInInfo">
+            <p class="signInTitle">Sign in</p>
+            <div>
+                <div>
+                    <p>Email:</p><input type="text" id="emailSignIn">
+                </div>
+                <div>
+                    <p>Password:</p><input type="password" id="passwordSignIn">
+                </div>
+            </div>
+            <p class="alertMes" id="alertMes"></p>
+            <button type="button" class="checkSignInButton" id="checkSignInButton" onclick="closeSignIn()">Check</button>
+        </div>
+    </dialog>
+
+    <header>
+        <img src="images/logo1.svg" height="80" class="logo" alt="Logo">
+
+        <nav>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="#">Sales</a></li>
+                <li><a href="#">Delivery</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Cart</a></li>
+                <li><a href="#">Account</a>
+                    <ul>
+                        <li><a href="#" onclick="showSignIn()">Sign in</a></li>
+                        <li><a href="#">Sign up</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="searchSection">
+        <div class="container">
+            <form action="" class="search" id="search-bar">
+                <input type="search" placeholder="Search..." class="search__input">
+
+                <div class="search__button" id="search-button" onclick="showSearchPlane()">
+                    <i class="ri-search-2-line search__icon"></i>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section>
+        <ul class="filtersSection" id="filtersSec">
+            <li><form class="filter">
+                <label class="filterName">Availability</label>
+                <form>
+                    <label>
+                        <input type="checkbox" checked> In stock<br>
+                    </label>
+                    <label>
+                        <input type="checkbox"> To order<br>
+                    </label>
+                    <label>
+                        <input type="checkbox"> Out of stock
+                    </label>
+                </form>
+                </form></li>
+            <li><form class="filter">
+                <label class="filterName">Price</label>
+                <form>
+                    <div class="price-input">
+                        <div class="price-field">
+                            <span>Min: </span>
+                            <input oninput="moveFilterLineByPrice(this)" id="price-min" type="number" class="input-min" value="0">
+                        </div>
+                        <br>
+                        <div class="price-field">
+                            <span>Max: </span>
+                            <input oninput="moveFilterLineByPrice(this)" id="price-max" type="number" class="input-max" value="1000">
+                        </div>
+                    </div>
+                    <div class="slider">
+                        <div id="progress_bar" class="progress"></div>
+                    </div>
+                    <div class="range-input">
+                        <input oninput="moveFilterLine(this)" type="range" id="range__min" class="range-min" min="0" max="1000" value="0">
+                        <input oninput="moveFilterLine(this)" type="range" id="range__max" class="range-max" min="0" max="1000" value="1000">
+                    </div>
+                </form>
+            </form></li>
+            <li><form class="filter">
+                <label class="filterName">Brands</label>
+                <form>
+                    <div class="brandsList">
+                        <label>
+                            <input type="checkbox" checked> HP<br>
+                        </label>
+                        <label>
+                            <input type="checkbox" checked> Lenovo<br>
+                        </label>
+                        <label>
+                            <input type="checkbox" checked> ACER<br>
+                        </label>
+                    </div>
+                    <div class="brandsList" style="margin-left: 5%;">
+                        <label>
+                            <input type="checkbox" checked> DELL<br>
+                        </label>
+                        <label>
+                            <input type="checkbox" checked> Apple<br>
+                        </label>
+                        <label>
+                            <input type="checkbox" checked> ASUS<br>
+                        </label>
+                    </div>
+                </form>
+            </form></li>
+        </ul>
+    </section>
+    <section>
+        <div class="goodsHolder" id="goods__Holder"></div>
+    </section>
+
+    <a href="#" class="goUp">
+        <i class="fas fa-arrow-up goUpIcon"></i>
+    </a>
+</body>
+</html>

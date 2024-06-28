@@ -1,0 +1,121 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link
+                href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+                rel="stylesheet"
+        />
+        <title>DD-shop</title>
+        <link rel="stylesheet" href="styles.css">
+        <script language="JavaScript" src="scripts.js"></script>
+        <script src="https://kit.fontawesome.com/bfec730d56.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <dialog id="initialsDialog" class="nameDialog">
+            <p>Change first and second names:</p>
+            <div>
+                <p>First name:</p><input type="text" id="newName">
+            </div>
+            <div>
+                <p>Second name:</p><input type="text" id="newSname">
+            </div>
+            <button type="button" onclick="closeNameDialog()">Save</button>
+        </dialog>
+
+        <dialog id="phoneDialog" class="phoneDialog">
+            <p>Change phone number:</p>
+            <div>
+                <input type="text" id="newNumber">
+            </div>
+            <button type="button" onclick="closePhoneDialog()">Save</button>
+        </dialog>
+
+        <dialog id="emailDialog" class="emailDialog">
+            <p>Change email:</p>
+            <div>
+                <input type="text" id="newEmail">
+            </div>
+            <button type="button" onclick="closeEmailDialog()">Save</button>
+        </dialog>
+
+        <header>
+            <img src="images/logo1.svg" height="80" class="logo" alt="Logo">
+
+            <nav>
+                <ul>
+                    <li><a href="main.html">Home</a></li>
+                    <li><a href="#">Sales</a></li>
+                    <li><a href="#">Delivery</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Cart</a></li>
+                    <li><a href="#">Account</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <div class="userInfo">
+                <div class="userInitials">
+                    <p id="initials">DM</p>
+                </div>
+                <div class="userFnameSname">
+                    <p id="nameField">Daniil Marchenko</p>
+                    <i class="ri-ball-pen-fill" onclick="showNameDialog()"></i>
+                </div>
+                <div class="userPhone">
+                    <p>Phone number:</p>
+                    <div>
+                        <p id="phoneField">+1 234 567-91-23</p>
+                        <i class="ri-ball-pen-fill" onclick="showPhoneDialog()"></i>
+                    </div>
+                </div>
+                <div class="userSex">
+                    <p>Gender:</p>
+                    <div class="gender-choice">
+                        <div>
+                            <input type="radio" value="male" name="gender" checked>
+                            male
+                            <span></span>
+                        </div>
+                        <div>
+                            <input type="radio" value="female" name="gender">
+                            female
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="userEmail">
+                <div>
+                    <p>Email:</p>
+                    <div>
+                        <p id="emailField">Someemail@yandex.ru</p>
+                        <i class="ri-ball-pen-fill" onclick="showEmailDialog()"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="userCard">
+                <div>
+                    <p>Credit card:</p>
+                    <div>
+                        <p>Card name:</p>
+                        <p id="cardName">МИР</p>
+                    </div>
+                    <div>
+                        <p>Card number:</p>
+                        <p id="cardNumber"> ** 1234</p>
+                    </div>
+                    <i class="ri-ball-pen-fill"></i>
+                </div>
+            </div>
+            <div class="userPassword">
+                <div>
+                    <p>Password:</p>
+                    <div>
+                        <p id="passwordField">**********</p>
+                        <i class="ri-ball-pen-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
